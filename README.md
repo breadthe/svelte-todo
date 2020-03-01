@@ -1,22 +1,8 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
 # Svelte + TailwindCSS + RollupJS + SASS/SCSS starter
 
-This is a very simple Todo project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/breadthe/svelte-todo.
+This is a very simple Todo project template for [Svelte](https://svelte.dev) apps.
 
 It has built-in support for TailwindCSS and SASS/SCSS, while the bundling is handled by Rollup.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
 
 ## Get started
 
