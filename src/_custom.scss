@@ -1,0 +1,15 @@
+p {
+    @apply bg-yellow-200;
+}
+
+button {
+    // @apply bg-indigo-500;
+    // @apply text-indigo-100;
+    // @apply px-2 py-1;
+    // @apply rounded;
+
+    &:hover {
+        @apply bg-indigo-700;
+        @apply text-white;
+    }
+}
