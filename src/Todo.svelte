@@ -8,7 +8,6 @@
   $: completed = todos.filter(i => i.completed);
 
   function addItem(event = null) {
-    newtodo = newtodo.trim();
     if ((event.type === "click" || event.key === "Enter") && newtodo) {
       todos.push({ id: uuid(), todo: newtodo, completed: false });
       todos = todos;
