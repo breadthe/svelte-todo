@@ -61,9 +61,9 @@
       </h2>
       <ul class="text-left bg-white p-4 shadow rounded">
         {#each incomplete as todo (todo.id)}
-          <li>
+          <li class="flex items-center space-x-2">
             <input type="checkbox" on:click={toggle(todo.id)} />
-            {todo.todo}
+            <span>{todo.todo}</span>
           </li>
         {/each}
       </ul>
@@ -91,9 +91,9 @@
       <ul
         class="text-left text-gray-500 line-through bg-white p-4 shadow rounded">
         {#each completed as todo (todo.id)}
-          <li>
+          <li class="flex items-center space-x-2">
             <input type="checkbox" on:click={toggle(todo.id)} checked />
-            {todo.todo}
+            <span>{todo.todo}</span>
           </li>
         {/each}
       </ul>
