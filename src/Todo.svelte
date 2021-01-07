@@ -64,7 +64,9 @@
       </h2>
       <ul class="text-left bg-white divide-y shadow rounded">
         {#each incomplete as todo (todo.id)}
-          <li class="flex items-center space-x-2 p-2">
+          <li
+            class="flex items-center space-x-2 p-2"
+            transition:slide={{ delay: 50, duration: 300, easing: quintOut }}>
             <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
@@ -95,7 +97,9 @@
         class="text-left text-gray-500 line-through bg-white divide-y shadow
         rounded">
         {#each completed as todo (todo.id)}
-          <li class="flex items-center space-x-2 p-2">
+          <li
+            class="flex items-center space-x-2 p-2"
+            transition:slide={{ delay: 50, duration: 300, easing: quintOut }}>
             <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
