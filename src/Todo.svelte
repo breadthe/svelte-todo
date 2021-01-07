@@ -1,4 +1,6 @@
 <script>
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   import { uuid } from "./utils";
 
   let newtodo = "";
@@ -33,7 +35,7 @@
     <input
       type="text"
       class="border-2 border-indigo-500 focus:outline-none
-      focus-within:border-indigo-800 px-2 py-1"
+      focus-within:border-indigo-800 px-2 py-1 rounded rounded-r-none"
       placeholder="New task"
       bind:value={newtodo}
       on:keydown={addItem}
@@ -41,9 +43,16 @@
     <button
       type="button"
       class="px-2 bg-indigo-500 text-indigo-100 hover:text-white
-      hover:bg-indigo-600"
+      hover:bg-indigo-600 rounded rounded-l-none"
       on:click={addItem}>
-      +
+      <svg
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width="15"
+        height="15">
+        <path d="M7.5 1v13M1 7.5h13" stroke="currentColor" />
+      </svg>
     </button>
   </div>
 
@@ -53,9 +62,9 @@
         New Tasks
         <small>({incomplete.length})</small>
       </h2>
-      <ul class="text-left bg-white p-4 shadow rounded">
+      <ul class="text-left bg-white divide-y shadow rounded">
         {#each incomplete as todo (todo.id)}
-          <li class="flex items-center space-x-2">
+          <li class="flex items-center space-x-2 p-2">
             <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
@@ -83,9 +92,10 @@
         </button>
       </h2>
       <ul
-        class="text-left text-gray-500 line-through bg-white p-4 shadow rounded">
+        class="text-left text-gray-500 line-through bg-white divide-y shadow
+        rounded">
         {#each completed as todo (todo.id)}
-          <li class="flex items-center space-x-2">
+          <li class="flex items-center space-x-2 p-2">
             <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
