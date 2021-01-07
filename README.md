@@ -1,5 +1,7 @@
 # Svelte TODO List
 
+![Svelte TODO List](https://user-images.githubusercontent.com/17433578/103836069-92c4b180-504d-11eb-9b1c-17e4fb60a46d.png)
+
 Based on the [Svelte + Tailwind 2 starter](https://github.com/breadthe/svelte-tailwind2-starter).
 
 ## Get started
