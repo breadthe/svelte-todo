@@ -15,12 +15,6 @@
     }
   }
 
-  function toggle(id) {
-    let todo = todos.find(i => i.id === id);
-    todo.completed = !todo.completed;
-    todos = todos;
-  }
-
   function clearCompleted() {
     todos = incomplete;
   }
@@ -62,7 +56,7 @@
       <ul class="text-left bg-white p-4 shadow rounded">
         {#each incomplete as todo (todo.id)}
           <li class="flex items-center space-x-2">
-            <input type="checkbox" on:click={toggle(todo.id)} />
+            <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
         {/each}
@@ -92,7 +86,7 @@
         class="text-left text-gray-500 line-through bg-white p-4 shadow rounded">
         {#each completed as todo (todo.id)}
           <li class="flex items-center space-x-2">
-            <input type="checkbox" on:click={toggle(todo.id)} checked />
+            <input type="checkbox" bind:checked={todo.completed} />
             <span>{todo.todo}</span>
           </li>
         {/each}
